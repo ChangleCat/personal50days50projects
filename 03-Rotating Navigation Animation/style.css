@@ -14,7 +14,6 @@ body {
   width: 100vw;
   background-color: #f0f0f0;
   transform-origin: left top;
-  transition: transform 0.2s ease-in-out;
 }
 
 .show-nav {
@@ -52,7 +51,6 @@ body {
   height: 6.5rem;
   background-color: #ff7979;
   transform-origin: left top;
-  transition: transform 0.2s ease-in-out;
 }
 
 .circle button {
@@ -82,7 +80,6 @@ body {
   width: 100%;
   height: 100%;
   transform-origin: left top;
-  transition: transform 0.2s ease-in-out;
 }
 
 .content {
@@ -107,7 +104,6 @@ body {
       color: #fff;
       width: fit-content;
       transform: translateX(-300%);
-      transition: transform 0.2s ease-in-out;
     }
 
     & > li:nth-child(2) {
@@ -117,4 +113,11 @@ body {
       padding-left: 2rem;
     }
   }
+}
+
+.container,
+.circle,
+.buttons,
+.nav ul > li {
+  transition: transform 0.2s ease-in-out;
 }
