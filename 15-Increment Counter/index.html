@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increment Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <template id="increment-counter-template">
+    <style>
+      :host {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        width: auto;
+        height: auto;
+      }
+      .counter {
+        font-size: 4rem;
+      }
+    </style>
+    <div class="icon"></div>
+    <div class="counter" data-target=""></div>
+    <div class="explain"></div>
+  </template>
+  
+  <div class="container">
+    <counter-container 
+      icon="bird"
+      target="1000"
+      explain="twitter followers"
+    ></counter-container>
+    <counter-container 
+      icon="youtube"
+      target="2500"
+      explain="youtube followers"
+    ></counter-container>
+    <counter-container 
+      icon="bilibili"
+      target="5000"
+      explain="bilibili followers"
+    ></counter-container>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
