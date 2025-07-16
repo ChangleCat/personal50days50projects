@@ -18,15 +18,16 @@ class CounterContainer extends HTMLElement {
     // this.content = content;
     this.startTime = null;
 
-    //! 非常重要，这个函数的this必须指向这个CounterContainer的实例
-    this.requestIncrementAnimation = this.requestIncrementAnimation.bind(this);
+    //! 非常重要，这个函数的 this 必须指向这个 CounterContainer 的实例
+    // this.requestIncrementAnimation = this.requestIncrementAnimation.bind(this);
+    //* 或者使用箭头函数
   }
 
   connectedCallback() {
     requestAnimationFrame(this.requestIncrementAnimation);
   }
 
-  requestIncrementAnimation(timestamp) {
+  requestIncrementAnimation = (timestamp) => {
     if (!this.startTime) {
       this.startTime = timestamp;
     }
